@@ -6,11 +6,24 @@ Angular 2+ schematics playground
 
 ### Schematics Dev Kit Installation
 ```console
-$ npm i -g @angular-devkit/schematics-cli
+npm i -g @angular-devkit/schematics-cli
 ```
 
 ### Creating new Schematic
 
 ```console
-$ schematics blank --name=hello-world-component
+schematics blank --name=hello-world-component
+```
+
+### Building Schematic
+
+```console
+npm run build
+```
+
+
+### Running Schematic
+
+```console
+schematics .:hello-world-component
 ```

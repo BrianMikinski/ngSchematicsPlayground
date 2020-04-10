@@ -1,4 +1,8 @@
 {
+    "$schema": "http://json-schema.org/schema",
+    "id": "SchematicsHelloWorldComponent",
+    "title": "Hello World Component Schema",
+    "type": "object",
     "properties": {
         "name": {
             "type": "string",
@@ -48,5 +52,6 @@
                 ]
             }
         }
-    }
+    },
+    "required": ["name"]
 }
