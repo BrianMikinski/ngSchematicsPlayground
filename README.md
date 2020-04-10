@@ -12,5 +12,5 @@ $ npm i -g @angular-devkit/schematics-cli
 ### Creating new Schematic
 
 ```console
-$ schematics blank --name=my-component
+$ schematics blank --name=hello-world-component
 ```
