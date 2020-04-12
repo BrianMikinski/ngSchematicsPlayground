@@ -12,7 +12,6 @@ import {
   template
 } from '@angular-devkit/schematics';
 import { join, normalize } from 'path';
-
 import { getWorkspace } from '@schematics/angular/utility/config';
 
 // tools provided by angluar dev kit you might want to use
@@ -28,14 +27,12 @@ import { getWorkspace } from '@schematics/angular/utility/config';
 
 export function setupOptions(host: Tree, options: any): Tree {
   const workspace = getWorkspace(host);
-
   if (!options.project) {
     options.project = Object.keys(workspace.projects)[0];
   }
-
   const project = workspace.projects[options.project];
-  options.path = join(normalize(project.root), 'src');
 
+  options.path = join(normalize(project.root), 'src');
   return host;
 }
 
@@ -63,6 +60,7 @@ export function helloWorldComponent(_options: any): Rule {
 
         if (tree.exists(fileEntry.path)) {
           tree.overwrite(fileEntry.path, fileEntry.content);
+          return null;
         }
 
         return fileEntry;
@@ -72,7 +70,7 @@ export function helloWorldComponent(_options: any): Rule {
 
     const rule = mergeWith(templateSource, MergeStrategy.Overwrite);
 
-    tree.create('hello.ts', 'console.log("Hello, World")');
+    //tree.create('hello.ts', 'console.log("Hello, World")');
     //return tree;
 
     return rule(tree, _context);

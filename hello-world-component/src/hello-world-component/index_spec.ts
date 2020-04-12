@@ -1,20 +1,20 @@
-import { Tree } from '@angular-devkit/schematics';
+//import { Tree } from '@angular-devkit/schematics';
 import { SchematicTestRunner, UnitTestTree } from '@angular-devkit/schematics/testing';
 import * as path from 'path';
 
-const collectionPath = path.join(__dirname, '../collection.json');
-
 describe('hello-world-component', () => {
 
-  // Tomas Trajan tutorial
-  it('works', () => {
-    const runner = new SchematicTestRunner('schematics', collectionPath);
-    runner.runSchematicAsync('hello-world-component', {}, Tree.empty()).toPromise().then(tree => {
+  const collectionPath = path.join(__dirname, '../collection.json');
 
-      expect(tree.files).toEqual(['/hello.ts']);
-    });
+  // Tomas Trajan tutorial
+  // it('works', () => {
+  //   const runner = new SchematicTestRunner('schematics', collectionPath);
+  //   runner.runSchematicAsync('hello-world-component', {}, Tree.empty()).toPromise().then(tree => {
+
+  //     expect(tree.files).toEqual(['/hello.ts']);
+  //   });
     
-  });
+  // });
 
   // Matt Raible tutorial
   
@@ -40,15 +40,16 @@ describe('hello-world-component', () => {
   let appTree: UnitTestTree;
 
   beforeEach(() => { 
-    //appTree = 
+     
     schematicRunner.runExternalSchematicAsync('@schematics/angular', 'workspace', workspaceOptions)
     .toPromise().then( tree => {
       appTree = tree;
     });
+
     schematicRunner.runExternalSchematicAsync('@schematics/angular', 'application', appOptions, appTree)
     .toPromise().then( tree => {
       appTree = tree;
-    });;
+    });
   });
 
   it('works', () => {
