@@ -1,0 +1,18 @@
+{
+    "label": "npm:run:build",
+    "type": "shell",
+    "script": "build",
+    "problemMatcher": [],
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "build",
+            "path": "hello-world-component/",
+            "group": "build",
+            "problemMatcher": [],
+            "label": "npm: build - hello-world-component",
+            "detail": "tsc -p tsconfig.json",
+        }
+    ]
+}
