@@ -8,7 +8,7 @@
         {
             "type": "npm",
             "script": "build",
-            "path": "hello-world-component/",
+            "path": "./",
             "group": "build",
             "problemMatcher": [],
             "label": "npm: build - hello-world-component",

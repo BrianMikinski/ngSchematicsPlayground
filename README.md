@@ -34,7 +34,7 @@ Configured in .vscode folder and can but iniated run command (F5).
 - setting the schema.json is not working as expected. If you remove it you are able to debug, if you leave it in there you are not.
 - NOTE: 
     - **YOU MUST IN INCLUDE DEFAULTS / OR PASS IN VARIABLE DEFINITIONS FOR ALL OF YOUR SCHEMA PROPERTIES, OTHERWISE YOU WILL NOT BE ABLE TO DEBUG!**
-    - **There is a bug in the debugging of schematics and only strings will be parsed from the command line. Your code will not run and will fail silently before hitting the schematic index**
+    - **There is a bug in the debugging of schematics and only strings will be parsed from the command line. Your code will not run and will fail silently before hitting the schematic index.ts file. See github issues to track the fixing of this.**
 
 ### Testing
 To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
@@ -45,7 +45,7 @@ schematics --help
 ```
 
 ### Unit Testing
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
+`npm run test` will run the unit tests using jasmine as a runner and test framework.
 
 ### Publishing
 
@@ -63,7 +63,9 @@ npm publish
     - Authoring Schematics
         - https://angular.io/guide/schematics-authoring#defining-input-options-with-a-schema-and-interfaces
 - Tomas Trajan
+    - https://medium.com/@tomastrajan
     - https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4
+    - https://www.youtube.com/watch?v=M5YSPas3qFo
 - Mike Hartington
     - Examples of schematic template if statements, string manipulations, etc.
     - ```
@@ -103,7 +105,15 @@ npm publish
 - Matt Vaughn
     - How to debug an Angular Schematic
     - https://medium.com/@angularlicious/how-to-debug-an-angular-schematic-using-visual-studio-3bbe4fde8fd8
-
+- Matt Raible
+    - https://developer.okta.com/blog/2019/02/13/angular-schematics
+    - https://www.youtube.com/watch?v=bLLJqagO_dg
+    - https://www.youtube.com/watch?v=ANwZIt3Ni2s
+- Schematics Starter
+    - https://github.com/schuchard/schematic-starter
+- Jonathan Campos
+    - Angular Schematics: Simple Schematic
+    - https://medium.com/rocket-fuel/angular-schematics-simple-schematic-76be2aa72850
 
 ### Notable Github Issues
 

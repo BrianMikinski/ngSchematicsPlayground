@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "SchematicsHelloWorldComponent",
+    "title": "Hello World Component Schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "minLength": 1,
+            "default": "world",
+            "x-prompt": "What is your name?"
+        }
+    },
+    "required": ["name"]
+}
