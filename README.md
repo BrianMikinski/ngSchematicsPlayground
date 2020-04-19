@@ -47,7 +47,16 @@ schematics --help
 ### Unit Testing
 `npm run test` will run the unit tests using jasmine as a runner and test framework.
 
-### Publishing
+### Local Publishing
+`npm pack` will pack the project. **Note: MAKE SURE YOU HAVE BUILT THE PROJECT AND ARE NOT EXCLUDING THE .JS .d.ts AND ALL OTHER FILES REQUIRED FOR THE SCHEMATIC TO RUN IN YOUR .GITIGNORE FILE. THIS WILL CAUSE IT ALL TO NOT WORK."
+`ng new my-test-app --routing --style css`
+`cd my-test-app`
+`npm install ../hello-world-component- tgz`
+`ng g hello-world-component`
+
+This will install your package locally and then you can use it in the current project.
+
+### NPM Publishing
 
 To publish, simply do:
 
@@ -63,6 +72,7 @@ npm publish
         - **Note, you must pass the template files onto a rule in order to use them, otherwise they will come back as null references. **
     - Authoring Schematics
         - https://angular.io/guide/schematics-authoring#defining-input-options-with-a-schema-and-interfaces
+
 - Tomas Trajan
     - https://medium.com/@tomastrajan
     - https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4
