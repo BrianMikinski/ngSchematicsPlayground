@@ -7,39 +7,27 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/node_modules/@angular-devkit/schematics-cli/bin/schematics.js",
-            //"cwd": "${workspaceFolder}",
+            "name": "Launch schematic",
+            "program": "${workspaceFolder}/node_modules/@angular-devkit/schematics-cli/bin/schematics.js",   
             "args": [
                 ".:hello-world-component",
                 "--name=hello",
                 "--useColor=true"
             ],
             "outFiles": [ ],
-            // "type": "node",
-            // "request": "launch",
-            // "name": "Jasmine schematics debugger",
-            // "program": "${workspaceRoot}/hello-world-component/node_modules/jasmine/bin/jasmine.js",
-            // "cwd": "${workspaceFolder}/hello-world-component",
-            // "env": {
-            //     "NODE_PATH": "."
-            // },
-            // "args": [
-            //     "src/**/*_spec.js"
-            // ],
             "preLaunchTask": "npm: build - hello-world-component"
-        } //,
-        // ,
-        // {
-        //     "type": "node",
-        //     "request": "launch",
-        //     "name": "Debug schematics",
-        //     "program": "${workspaceRoot}/hello-world-component/node_modules/@angular-devkit/schematics-cli/bin/schematics.js",
-        //     "args": [
-        //         ".:hello-world-component",
-        //         "--name=hello"
-        //     ],
-        //     "preLaunchTask": "npm:run:build"
-        // }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jasmine schematics debugger",
+            "program": "${workspaceRoot}/node_modules/jasmine/bin/jasmine.js",
+            "args": [
+                "src/**/*_spec.js"//,
+                // ".:hello-world-component",
+                // "--name=hello",
+                // "--useColor=true"
+            ],
+        }
     ]
 }

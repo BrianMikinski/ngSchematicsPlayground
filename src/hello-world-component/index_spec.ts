@@ -1,6 +1,7 @@
 //import { Tree } from '@angular-devkit/schematics';
 import { SchematicTestRunner, UnitTestTree } from '@angular-devkit/schematics/testing';
 import * as path from 'path';
+import { HelloWorldSchema } from './schema';
 
 describe('hello-world-component', () => {
 
@@ -33,7 +34,7 @@ describe('hello-world-component', () => {
     name: 'schematest'
   };
 
-  const schemaOptions: any = { 
+  const schemaOptions: HelloWorldSchema = { 
     name: 'foo'
   };
 

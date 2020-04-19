@@ -60,6 +60,7 @@ npm publish
 - Authoring schematics
     - Templates and how to build them https://angular.io/guide/schematics-for-libraries
         - Dasherize, classify, etc - 
+        - **Note, you must pass the template files onto a rule in order to use them, otherwise they will come back as null references. **
     - Authoring Schematics
         - https://angular.io/guide/schematics-authoring#defining-input-options-with-a-schema-and-interfaces
 - Tomas Trajan
@@ -114,6 +115,9 @@ npm publish
 - Jonathan Campos
     - Angular Schematics: Simple Schematic
     - https://medium.com/rocket-fuel/angular-schematics-simple-schematic-76be2aa72850
+- Chris Noring
+    - Angular Schematics - the unknown hero
+    - https://www.youtube.com/watch?v=_LPzY9GrNwY
 
 ### Notable Github Issues
 
