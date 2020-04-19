@@ -1,4 +1,4 @@
-//import { Tree } from '@angular-devkit/schematics';
+import { Tree } from '@angular-devkit/schematics';
 import { SchematicTestRunner, UnitTestTree } from '@angular-devkit/schematics/testing';
 import * as path from 'path';
 import { HelloWorldSchema } from './schema';
@@ -8,9 +8,9 @@ describe('hello-world-component', () => {
   const collectionPath = path.join(__dirname, '../collection.json');
 
   // Tomas Trajan tutorial
-  // it('works', () => {
+  // it('works', async () => {
   //   const runner = new SchematicTestRunner('schematics', collectionPath);
-  //   runner.runSchematicAsync('hello-world-component', {}, Tree.empty()).toPromise().then(tree => {
+  //   await runner.runSchematicAsync('hello-world-component', {}, Tree.empty()).toPromise().then(tree => {
 
   //     expect(tree.files).toEqual(['/hello.ts']);
   //   });
