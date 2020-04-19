@@ -38,24 +38,21 @@ describe('hello-world-component', () => {
     name: 'foo'
   };
 
-  let appTree: UnitTestTree;
+  let appTree: UnitTestTree
 
-  beforeEach(() => { 
+  beforeEach( async () => { 
      
-    schematicRunner.runExternalSchematicAsync('@schematics/angular', 'workspace', workspaceOptions)
-    .toPromise().then( tree => {
-      appTree = tree;
-    });
+    appTree = await schematicRunner.runExternalSchematicAsync('@schematics/angular', 'workspace', workspaceOptions)
+    .toPromise();
 
-    schematicRunner.runExternalSchematicAsync('@schematics/angular', 'application', appOptions, appTree)
-    .toPromise().then( tree => {
-      appTree = tree;
-    });
+    appTree = await schematicRunner.runExternalSchematicAsync('@schematics/angular', 'application', appOptions, appTree)
+    .toPromise();
+
   });
 
-  it('works', () => {
+  it('works', async () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
-    runner.runSchematicAsync('hello-world-component', schemaOptions, appTree).toPromise().then(tree => {
+    await runner.runSchematicAsync('hello-world-component', schemaOptions, appTree).toPromise().then(tree => {
       const appComponent = tree.readContent('/projects/schematest/src/app/app.component.ts'); 
       expect(appComponent).toContain(`name = '${schemaOptions.name}'`); 
     });

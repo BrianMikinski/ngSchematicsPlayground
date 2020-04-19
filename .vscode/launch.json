@@ -23,7 +23,8 @@
             "name": "Jasmine schematics debugger",
             "program": "${workspaceRoot}/node_modules/jasmine/bin/jasmine.js",
             "args": [
-                "src/**/*_spec.js"//,
+                "src/**/*_spec.js"
+                // shouldn't need to pass these path's in because we're setting them in the test
                 // ".:hello-world-component",
                 // "--name=hello",
                 // "--useColor=true"
