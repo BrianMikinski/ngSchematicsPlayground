@@ -48,7 +48,9 @@ schematics --help
 `npm run test` will run the unit tests using jasmine as a runner and test framework.
 
 ### Local Publishing
-`npm pack` will pack the project. **Note: MAKE SURE YOU HAVE BUILT THE PROJECT AND ARE NOT EXCLUDING THE .JS .d.ts AND ALL OTHER FILES REQUIRED FOR THE SCHEMATIC TO RUN IN YOUR .GITIGNORE FILE. THIS WILL CAUSE IT ALL TO NOT WORK.**
+`npm pack` will pack the project. 
+
+**Note: MAKE SURE YOU HAVE BUILT THE PROJECT AND ARE NOT EXCLUDING THE .JS .d.ts AND ALL OTHER FILES REQUIRED FOR THE SCHEMATIC TO RUN IN YOUR .GITIGNORE FILE. THIS WILL CAUSE IT ALL TO NOT WORK.**
 
 - `ng new my-test-app --routing --style css`
 - `cd my-test-app`
