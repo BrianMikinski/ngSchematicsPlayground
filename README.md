@@ -128,6 +128,15 @@ npm publish
 - Chris Noring
     - Angular Schematics - the unknown hero
     - https://www.youtube.com/watch?v=_LPzY9GrNwY
+- Nitay Neeman
+    - Making an Addable Angular Package Using Schematics
+    - https://nitayneeman.com/posts/making-an-addable-angular-package-using-schematics/
+- DZone
+    - Create Your First Angular Schematics
+    - https://dzone.com/articles/create-your-first-angular-schematics
+- Okta
+    - Building your first PWA with Angular
+    - https://developer.okta.com/blog/2019/01/30/first-angular-pwa
 
 ### Notable Github Issues
 
